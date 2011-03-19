@@ -1,0 +1,18 @@
+Port of http://g.etfv.co/ to CherryPy.
+
+Original source available at http://potato.codebasehq.com/getfavicon
+
+Improvements:
+1. Fetches correct favicon when multiple versions exist for a domain
+   Example: http://www.bbc.co.uk/bbcthree/
+2. Proper cookie handling over possible redirections
+   Example: http://www.gmail.com
+3. Meta-refresh processing
+   Example: http://www.dinosaurcomics.com
+4. Request timeouts
+
+Usage:
+1. Set DEFAULT_FAVICON_LOC and DEFAULT_FAVICON_TYPE in globals.py
+2. If using behind Apache running mod_wsgi, modify cherrypy.wsgi to set ROOT
+
+Thanks to Jason Cartwright
